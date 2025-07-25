@@ -1,6 +1,6 @@
 Package: NiftiArray
 Title: HDF5 Delayed Array for Nifti Objects
-Version: 0.99.6.1
+Version: 0.99.6.2
 Authors@R: c(person(given = "John",
                     family = "Muschelli",
                     email = "muschellij2@gmail.com",
@@ -22,7 +22,8 @@ Imports:
     methods,
     rhdf5 (>= 2.33.4),
     RNifti,
-    S4Vectors
+    S4Vectors,
+    h5mread
 Suggests:
     spelling, 
     covr,
@@ -43,7 +44,7 @@ Suggests:
     testthat,
     tibble,
     tidyr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.3.2
 Remotes: 
     grimbough/rhdf5,
     grimbough/Rhdf5lib    

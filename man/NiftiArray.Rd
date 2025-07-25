@@ -43,7 +43,7 @@ NiftiArray(
 \arguments{
 \item{filepath}{The path (as a single character string) to the NIfTI or HDF5
 file where the dataset is located. If a path to the NIfTI is provided we call
-\code{\link[RNifti:readNifti]{RNifti::readNifti()}} and \code{\link[NiftiArray:writeNiftiArray]{NiftiArray::writeNiftiArray()}} to convert to the HDF5
+\code{\link[RNifti:readNifti]{RNifti::readNifti()}} and \code{\link[=writeNiftiArray]{writeNiftiArray()}} to convert to the HDF5
 and more memory and time are used. If a path to a HDF5 file the data is simply loaded
 into R as an object of class \link{NiftiArray}. A path to the HDF5 file is more memory and time efficient.}
 
@@ -54,7 +54,7 @@ Unless you have to other "image" groups in the HDF5 file there is no need to cha
 Unless you have to other "header" groups in the HDF5 file there is no need to change default settings.}
 
 \item{type}{\code{NA} or the R atomic type, passed to
-\code{\link[HDF5Array:HDF5Array]{HDF5Array::HDF5Array()}} corresponding to the type of the HDF5 dataset. Default is set to \code{NA}.
+\code{\link[HDF5Array:HDF5Array-class]{HDF5Array::HDF5Array()}} corresponding to the type of the HDF5 dataset. Default is set to \code{NA}.
 Unless you want different types of HDF5 storage files there is no need to change default settings.}
 
 \item{header}{List of NIfTI header information to override call of
@@ -67,11 +67,11 @@ Currently necessary for easy reshaping.}
 A \code{NiftiArray} object
 }
 \description{
-NiftiArray, a \link[HDF5Array:HDF5Array]{HDF5Array::HDF5Array} with a header.
+NiftiArray, a \link[HDF5Array:HDF5Array-class]{HDF5Array::HDF5Array} with a header.
 }
 \note{
 All the operations available for
-\link[HDF5Array:HDF5Array]{HDF5Array::HDF5Array} objects work on
+\link[HDF5Array:HDF5Array-class]{HDF5Array::HDF5Array} objects work on
 NiftiArray objects.
 }
 \examples{

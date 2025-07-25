@@ -11,12 +11,12 @@ setClass("ReshapedNiftiArraySeed",
            intent_code = "integer",
            datatype = "integer",
            bitpix = "integer",
-           slice_start = "integer",
+           slice_start = "numeric",
            pixdim = "numeric",
            vox_offset = "numeric",
            scl_slope = "numeric",
            scl_inter = "numeric",
-           slice_end = "integer",
+           slice_end = "numeric",
            slice_code = "integer",
            xyzt_units = "integer",
            cal_max = "numeric",
@@ -85,12 +85,12 @@ ReshapedNiftiArraySeed <- function(filepath, name = "image",
                          extendible = TRUE)
   hdr = nifti_header(seed)
   reshaped_dim <- as.integer(dim)
-  collapse_along <- HDF5Array:::find_dims_to_collapse(reshaped_dim, seed@dim)
+  collapse_along <- h5mread::find_dims_to_collapse(reshaped_dim, seed@dim)
   if (is.null(chunkdim)) {
     if (is.null(seed@chunkdim)) {
       reshaped_chunkdim <- NULL
     } else {
-      reshaped_chunkdim <-  HDF5Array:::collapse_dims(seed@chunkdim,
+      reshaped_chunkdim <-  h5mread:::collapse_dims(seed@chunkdim,
                                                       collapse_along)
       reshaped_chunkdim <- as.integer(reshaped_chunkdim)
     }
