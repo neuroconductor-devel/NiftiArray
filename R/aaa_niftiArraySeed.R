@@ -29,7 +29,7 @@ setClass(
         intent_code = "integer",
         datatype = "integer",
         bitpix = "integer",
-        slice_start = "numeric",
+        slice_start = "integer",
         pixdim = "numeric",
         vox_offset = "numeric",
         scl_slope = "numeric",
