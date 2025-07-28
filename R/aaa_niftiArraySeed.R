@@ -162,6 +162,7 @@ NiftiArraySeed <- function(
         }
     } else {
         hdr = header
+        hdr$slice_start <- as.integer(hdr$slice_start)
     }
     if ("dim" %in% names(hdr)) {
         if (!("dim_" %in% names(hdr))) {
