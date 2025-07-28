@@ -34,7 +34,7 @@ setClass(
         vox_offset = "numeric",
         scl_slope = "numeric",
         scl_inter = "numeric",
-        slice_end = "numeric",
+        slice_end = "integer",
         slice_code = "integer",
         xyzt_units = "integer",
         cal_max = "numeric",
