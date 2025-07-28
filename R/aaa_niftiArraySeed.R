@@ -170,7 +170,6 @@ NiftiArraySeed <- function(
         hdr$dim = NULL
     }
     hdr = lapply(hdr, as.vector)
-    hdr$slice_start <- as.integer(hdr$slice_start)
     args = c(args, hdr)
     args$header_name = header_name
     args$extendible = extendible
